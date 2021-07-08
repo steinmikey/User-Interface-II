@@ -12,16 +12,29 @@ header {
   align-items: center;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-top: 5rem;
 }
-
-nav a {
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 3.5rem;
+  /* background-color: gray;  */
+}
+.nav-head a {
   text-decoration: none;
+  padding: 0.25rem 0;
+  width: 5rem;
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+  background-color: black;
 }
 
 .intro h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 }
 .intro p {
@@ -29,7 +42,7 @@ nav a {
   margin-bottom: 2vw;
 }
 .intro-pic {
-  border-radius: 2vw;
+  border-radius: 1vw;
   width: 80vw;
   height: 32vw;
   background-image: url("https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3450&q=80");
@@ -49,7 +62,7 @@ nav a {
   width: 12vw;
   height: 20vw;
   /* border: 2px solid red; */
-  border-radius: 2vw;
+  border-radius: 1vw;
   background-repeat: no-repeat;
   background-size: cover, contain;
 }
@@ -69,20 +82,27 @@ nav a {
   margin: 0;
   align-items: center;
 }
-
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 5rem;
 }
-footer a {
+.foot-contact {
+  box-sizing: border-box;
+  height: 2rem;
+  font-size: 0.9rem;
+  width: 6rem;
   text-decoration: none;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+footer nav a {
+  width: 2rem;
+  margin: 1rem;
 }
 .social {
   display: flex;
   width: 80vw;
   justify-content: flex-end;
-}
-.social a {
-  padding: 2vw;
 }
