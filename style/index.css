@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,11 +12,52 @@ header {
   align-items: center;
 }
 h1 {
+  font-size: 3rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.intro p {
+  width: 60vw;
+  margin-bottom: 2vw;
 }
 .intro-pic {
+  border-radius: 2vw;
   width: 80vw;
   height: 35vw;
   background-image: url("https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3450&q=80");
   background-repeat: no-repeat;
   background-size: 100%;
+  margin-bottom: 2vw;
+}
+
+.projects {
+  width: 80vw;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  align-content: stretch;
+  margin-bottom: 2vw;
+}
+.projects div {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+  border-radius: 2vw;
+}
+.proj-name-1,
+.proj-name-2,
+.proj-name-3,
+.proj-name-4 {
+  background-image: url("https://picsum.photos/200");
+}
+.projects p {
+  width: 30%;
+  border: 2px solid red;
+  padding: 1.5vw;
+  border-radius: 2vw;
+  margin: 0;
 }
