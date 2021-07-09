@@ -59,7 +59,7 @@ header nav {
   margin: 0 0 2vw 0;
 }
 .intro-pic {
-  border-radius: 1vw;
+  border-radius: 2vw;
   width: 80vw;
   height: 25vw;
   background-image: url("https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3450&q=80");
@@ -80,10 +80,15 @@ header nav {
   width: 12vw;
   height: 20vw;
   /* border: 2px solid red; */
-  border-radius: 1vw;
+  border-radius: 2vw;
   background-repeat: no-repeat;
   background-size: cover, contain;
+  transition: border-radius .4s;
 }
+.projects div:hover {
+  border-radius: 0;
+}
+
 .proj-name-1,
 .proj-name-2,
 .proj-name-3,
