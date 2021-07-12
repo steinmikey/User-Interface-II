@@ -95,10 +95,7 @@ header nav {
   border-radius: 0;
 }
 
-.proj-name-1,
-.proj-name-2,
-.proj-name-3,
-.proj-name-4 {
+.proj-image {
   background-image: url("https://picsum.photos/300/400");
   width: 12vw;
   height: 20vw;
@@ -108,7 +105,7 @@ header nav {
   background-size: cover;
   transition: border-radius 0.4s;
 }
-.projects p {
+.projects-description {
   display: flex;
   width: 30%;
   padding: 1.5vw 4vw;
@@ -149,7 +146,16 @@ footer nav a:hover {
 
 /* media queries */
 @media (max-width: 800px) {
-  nav {
+  .projects {
+    flex-wrap: wrap;
+  }
+  .proj-image {
+    width: 48%;
+    height: 40vh;
+    margin: 1vh 0;
+  }
+  .projects-description {
+    width: 95%;
   }
 }
 
@@ -161,13 +167,12 @@ footer nav a:hover {
     flex-direction: column;
     width: 40%;
     align-content: stretch;
-    a 
   }
   .nav-head a {
     width: 100%;
   }
   .intro {
-    width: 90%
+    width: 90%;
   }
   .intro h2 {
     letter-spacing: 2px;
@@ -183,10 +188,7 @@ footer nav a:hover {
   .projects {
     flex-wrap: wrap;
   }
-  .proj-name-1,
-  .proj-name-2,
-  .proj-name-3,
-  .proj-name-4 {
+  .proj-image {
     width: 48%;
     height: 40vh;
     margin: 1vh 0;
@@ -194,6 +196,4 @@ footer nav a:hover {
   .projects p {
     width: 100%;
   }
-  
-  
 }
