@@ -1,12 +1,18 @@
-html {
-  
+* {
+  box-sizing: border-box; /*respect the width I've given you, if I add padding or border apply it within the width no in addition to it*/
+  padding: 0;
+  margin: 0;
+  max-width: 100%; /*You can NEVER be bigger than your parent - this stops the horizontal scroll*/
+  /* border:1px solid grey; */
 }
-
-
-
+/*General Styles*/
+html {
+  font-size: 62.5%;
+}
 
 body {
   font-family: "Gothic A1", Arial, sans-serif;
+  font-size: 1.6rem;
   font-weight: 500;
   background-color: lightgray;
   display: flex;
@@ -14,8 +20,8 @@ body {
   align-items: center;
 }
 header {
-  width: 100vw;
   display: flex;
+  width: 80%;
   flex-direction: column;
   align-items: center;
 }
@@ -29,8 +35,8 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80vw;
-  height: 3.5rem;
+  width: 80%;
+
   /* background-color: gray;  */
 }
 
@@ -38,15 +44,15 @@ header nav {
   background-color: gray;
 }
 .nav-head a {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-decoration: none;
-  padding: 0.5rem 1rem 0.25rem 1rem;
-  width: 5rem;
+  padding: 1.2rem 0;
   text-align: center;
-
   color: lightgray;
   background-color: black;
   margin: 0 0.25rem;
+  width: 50%;
+  border: 2px solid lightgray;
 }
 
 .intro {
@@ -55,6 +61,7 @@ header nav {
   width: 80vw;
   align-items: center;
 }
+
 .intro h2 {
   font-weight: 600;
   font-size: 3rem;
@@ -83,15 +90,7 @@ header nav {
   align-items: stretch;
   margin-bottom: 2vw;
 }
-.projects div {
-  width: 12vw;
-  height: 20vw;
-  /* border: 2px solid red; */
-  border-radius: 2vw;
-  background-repeat: no-repeat;
-  background-size: cover, contain;
-  transition: border-radius .4s;
-}
+
 .projects div:hover {
   border-radius: 0;
 }
@@ -101,12 +100,17 @@ header nav {
 .proj-name-3,
 .proj-name-4 {
   background-image: url("https://picsum.photos/300/400");
+  width: 12vw;
+  height: 20vw;
+  /* border: 2px solid red; */
+  border-radius: 2vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: border-radius 0.4s;
 }
 .projects p {
   display: flex;
   width: 30%;
-  box-sizing: border-box;
-  /* border: 2px solid red; */
   padding: 1.5vw 4vw;
   border-radius: 2vw;
   margin: 0;
@@ -116,7 +120,6 @@ footer {
   margin-bottom: 3rem;
 }
 .foot-contact {
-  box-sizing: border-box;
   height: 2rem;
   font-weight: 600;
   font-size: 0.9rem;
@@ -142,4 +145,55 @@ footer nav a:hover {
   display: flex;
   width: 80vw;
   justify-content: flex-end;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  nav {
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 90%;
+  }
+  .nav-head {
+    flex-direction: column;
+    width: 40%;
+    align-content: stretch;
+    a 
+  }
+  .nav-head a {
+    width: 100%;
+  }
+  .intro {
+    width: 90%
+  }
+  .intro h2 {
+    letter-spacing: 2px;
+  }
+  .intro p {
+    width: 80%;
+  }
+  .intro-pic {
+    height: 42vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .projects {
+    flex-wrap: wrap;
+  }
+  .proj-name-1,
+  .proj-name-2,
+  .proj-name-3,
+  .proj-name-4 {
+    width: 48%;
+    height: 40vh;
+    margin: 1vh 0;
+  }
+  .projects p {
+    width: 100%;
+  }
+  
+  
 }
