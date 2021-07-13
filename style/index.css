@@ -96,13 +96,14 @@ header nav {
 }
 
 .proj-image {
-  background-image: url("https://picsum.photos/300/400");
+  /* background-image: url("https://picsum.photos/300/400"); */
   width: 12vw;
   height: 20vw;
+  object-fit: cover;
   /* border: 2px solid red; */
   border-radius: 2vw;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   transition: border-radius 0.4s;
 }
 .projects-description {
