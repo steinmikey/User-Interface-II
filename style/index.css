@@ -1,1 +1,200 @@
-/* Add CSS styling here */
+* {
+  box-sizing: border-box; /*respect the width I've given you, if I add padding or border apply it within the width no in addition to it*/
+  padding: 0;
+  margin: 0;
+  max-width: 100%; /*You can NEVER be bigger than your parent - this stops the horizontal scroll*/
+  /* border:1px solid grey; */
+}
+/*General Styles*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Gothic A1", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-weight: 800;
+  font-size: 4rem;
+  margin-top: 5rem;
+  margin-block-end: 0;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+
+  /* background-color: gray;  */
+}
+
+.nav-head a:hover {
+  background-color: gray;
+}
+.nav-head a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  padding: 1.2rem 0;
+  text-align: center;
+  color: lightgray;
+  background-color: black;
+  margin: 0 0.25rem;
+  width: 50%;
+  border: 2px solid lightgray;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-items: center;
+}
+
+.intro h2 {
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.intro p {
+  width: 60vw;
+  margin: 0 0 2vw 0;
+}
+.intro-pic {
+  border-radius: 2vw;
+  width: 80vw;
+  height: 25vw;
+  background-image: url("https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3450&q=80");
+  background-repeat: no-repeat;
+  background-position-y: -8vw;
+  background-size: 100%;
+  margin-bottom: 2vw;
+}
+
+.projects {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 2vw;
+}
+
+.projects div:hover {
+  border-radius: 0;
+}
+
+.proj-image {
+  /* background-image: url("https://picsum.photos/300/400"); */
+  width: 12vw;
+  height: 20vw;
+  object-fit: cover;
+  /* border: 2px solid red; */
+  border-radius: 2vw;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  transition: border-radius 0.4s;
+}
+.projects-description {
+  display: flex;
+  width: 30%;
+  padding: 1.5vw 4vw;
+  border-radius: 2vw;
+  margin: 0;
+  align-items: center;
+}
+footer {
+  margin-bottom: 3rem;
+}
+.foot-contact {
+  height: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 6rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.25rem;
+  text-align: center;
+  line-height: 1.5;
+}
+footer nav a {
+  width: 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  line-height: 0;
+}
+footer nav a:hover {
+  background-color: gray;
+}
+.social {
+  display: flex;
+  width: 80vw;
+  justify-content: flex-end;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  .projects {
+    flex-wrap: wrap;
+  }
+  .proj-image {
+    width: 48%;
+    height: 40vh;
+    margin: 1vh 0;
+  }
+  .projects-description {
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 90%;
+  }
+  .nav-head {
+    flex-direction: column;
+    width: 40%;
+    align-content: stretch;
+  }
+  .nav-head a {
+    width: 100%;
+  }
+  .intro {
+    width: 90%;
+  }
+  .intro h2 {
+    letter-spacing: 2px;
+  }
+  .intro p {
+    width: 80%;
+  }
+  .intro-pic {
+    height: 42vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .projects {
+    flex-wrap: wrap;
+  }
+  .proj-image {
+    width: 48%;
+    height: 40vh;
+    margin: 1vh 0;
+  }
+  .projects p {
+    width: 100%;
+  }
+}
